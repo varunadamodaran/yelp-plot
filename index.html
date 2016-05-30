@@ -7,14 +7,43 @@
     <link rel="stylesheet" href="lib/bootstrap.min.css">  <!--bootstrap for styling-->
     <title>The d3 test</title>
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.v2.js" charset="utf-8"></script>
+    <style>
+    body {background-color:linen;}
+    h1   {color:"black";font-family: serif;
+    font-size: 200%;}
+    </style>
 </head>
 <body class="container"> <!-- content -->
     <main>
-        <h1 id="title">Yelp Reviews and Ratings Plot</h1>
+        <h1 
+        id="title">Yelp Reviews and Ratings Plot
+        </h1>
         
         <!-- more html content can go here -->
         
         <div id="vis-container"> <!-- A container to hold the visualization -->
+                <div style="margin-right:1em; font-size:1.2em">
+                 <select id = "Option" 
+                 style="color:black;
+                  
+                  font-family:serif;
+                  border:1px solid red;
+                  border-radius: 10px">
+                 <option value="coffee">Coffee</option>
+                 <option value="breakfast_brunch">Breakfast & Brunch</option>
+                 <option value="bars">Bars</option>
+                 <option value="icecream">Icecream</option>
+                 </select>
+                  <button id ="Find" type="button" 
+                  style="color:white;
+                  background-color:#c41200;
+                  font-family:Helvetica;
+                  font-size:12px;
+                  border:1px solid transparent;
+                  
+                  border-radius: 10px"
+                  >Find</button>
+        </div>  
         </div>
 
         <!-- more html content can go here -->
