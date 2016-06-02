@@ -76,7 +76,7 @@ d3.select('svg').remove()
       var names = chart_data.names
 
       // size and margins for the chart
-      var margin = {top: 20, right: 20, bottom: 120, left: 60}
+      var margin = {top: 40, right: 20, bottom: 120, left: 60}
         , width = 500 - margin.left - margin.right
         , height = 500 - margin.top - margin.bottom;
 
@@ -117,7 +117,7 @@ d3.select('svg').remove()
       .call(xAxis)
       .selectAll("text")
               .style({ 'stroke': 'black', 'width':''})
-              .style({'font-size': '10px', 'font-family': 'serif',
+              .style({'font-size': '10px', 'font-family': 'sans-serif',
                   'font-style': 'normal', 'font-variant': 'normal', 
                   'font-weight': 'lighter'});
 
@@ -127,7 +127,7 @@ d3.select('svg').remove()
         .attr("transform", "translate(" + (width / 2) + " ," + (height+40) + ")")
         .style("text-anchor", "middle")
         .attr("fill","#c41200")
-        .style({'font-size': '12px', 'font-family': 'serif',
+        .style({'font-size': '14px', 'font-family': 'sans-serif',
                   'font-style': 'normal', 'font-variant': 'bold', 
                   'font-weight': 'bold'})
         .text("NUMBER  OF  REVIEWS")
@@ -145,7 +145,7 @@ d3.select('svg').remove()
       .call(yAxis)
       .selectAll("text")
               .style({ 'stroke': 'black', 'width':''})
-              .style({'font-size': '10px', 'font-family': 'serif',
+              .style({'font-size': '10px', 'font-family': 'sans-serif',
                   'font-style': 'normal', 'font-variant': 'normal', 
                   'font-weight': 'normal'});
 
@@ -157,10 +157,10 @@ d3.select('svg').remove()
               .attr("fill","#c41200")
               .attr("dy", "1em")
               .style("text-anchor", "middle")
-              .style({'font-size': '12px', 'font-family': 'serif',
+              .style({'font-size': '14px', 'font-family': 'sans-serif',
                   'font-style': 'normal', 'font-variant': 'normal', 
                   'font-weight': 'bold'})
-        .text("RATINGS")
+        .text("USER RATINGS")
 
       // draw the graph object
       var g = main.append("svg:g"); 
@@ -169,7 +169,7 @@ d3.select('svg').remove()
         .append("div")
         .style("visibility", "hidden")
         .style("position", "absolute")
-        .style({'font-size': '11px', 'font-family': 'serif',
+        .style({'font-size': '12px', 'font-family': 'sans-serif',
                   'font-style': 'normal', 'font-variant': 'normal', 
                   'font-weight': 'bold'})
         .text("");
@@ -179,7 +179,7 @@ d3.select('svg').remove()
         .enter().append("svg:circle")  // create a new circle for each value
             .attr("cy", function (d) { return y(d); } ) // translate y value to a pixel
             .attr("cx", function (d,i) { return x(xdata[i]); } ) // translate x value
-            .attr("r", 10) // radius of circle
+            .attr("r", 11) // radius of circle
             .call(d3.behavior.zoom().on("zoom", redraw))
             .attr("fill","grey")
             .style("opacity", 0.6) // opacity of circle
@@ -193,7 +193,7 @@ d3.select('svg').remove()
             .on("mouseout", function(d) {      
                 d3.select(this).transition()
                 .duration(750)
-                .attr("r", 10)
+                .attr("r", 11)
                 .attr("fill","grey")
                 return tooltip.style("visibility", "hidden");
                   }) 
