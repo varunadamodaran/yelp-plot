@@ -3,56 +3,74 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>INFX 598G | D3 Visualization Project</title>
+    
+    <title>  
+        INFX 598G | D3 Visualization Project </title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">  <!--bootstrap for styling-->
     <title>The d3 test</title>
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.v2.js" charset="utf-8"></script>
     <style>
     body {background-color:white;}
-    h1   {color:"black";font-family: serif;
+    h1  
+    {color:"black";font-family: serif;
     font-size: 200%;}
     </style>
 </head>
+
 <body class="container"> <!-- content -->
     <main>
         <h1 
         id="title">Yelp Reviews and Ratings Plot
         <img src="yelpicon.png" alt ="Yelp!" width = "30">
         </h1>
+         <!-- Citation for the data in the plot -->
+        <h6>(The data displayed in this plot has been obtained from  
+        <a href="https://www.yelp.com/developers/documentation/v2/overview">Yelp Api </a>)</p> </h6>
+            
         
-        <!-- more html content can go here -->
         <header>
-            This interactive visualization illustrates the relationship between the number of reviews and ratings, to help users discern if there is a correlation between the two variables.  It also helps users find highly rated and most reviewed businesses in a category. 
-            </br></br>
+           Wouldn't it be great to have a plot which shows us the Yelp ratings and the number of user reviews of a place? This interactive visualization does exactly that! It illustrates the relationship between the number of reviews and ratings, to help us discern if there is a correlation between the two variables.  It also helps find highly rated and most reviewed businesses in a category. 
+           Select your options and click on Visualize Data
+           <br></br>
             </header>
         <div id="vis-container"> <!-- A container to hold the visualization -->
-                <div style="margin-right:5em; font-size:1.2em">
+                <div style="margin-center:5em;align:center; font-size:1.2em">
+                    
                  <select id = "Option" 
-                 style="color:black;
-                  
+                 style="color:black; 
                   font-family:serif;
                   border:1px solid red;
                   border-radius: 10px">
-                 <option value="coffee">Coffee</option>
+                 <option value="coffee">Coffee</option> <!-- This is the drop box of categories -->
                  <option value="breakfast_brunch">Breakfast & Brunch</option>
                  <option value="bars">Bars</option>
                  <option value="icecream">Icecream</option>
                  </select>
-                  <button id ="Find" type="button" 
-                  style="color:white;
+                 &nbsp;
+                 <select id = "City" 
+                 style="color:black;   
+                  font-family:serif;
+                  border:1px solid red;
+                  border-radius: 10px">
+                 <option value="seattle">Seattle</option> <!-- This is the drop box of cities -->
+                 <option value="san francisco">San Francisco</option>
+                 <option value="new york">New York</option>
+                 <option value="los angeles">Los Angeles</option>
+                 </select>
+                 &nbsp;
+                 <!-- Button "Visualiza data" -->
+                  <button id ="Find" type="button"  
+                  style="color:white; 
                   background-color:#c41200;
                   font-family:Helvetica;
                   font-size:12px;
                   border:1px solid transparent;
-                  
                   border-radius: 10px"
                   >Visualize Data</button>
         </div>  
         </div>
 
-        <!-- more html content can go here -->
 
-        <!--p it="citation">Data from ...</p-->
 
 
     </main>     
