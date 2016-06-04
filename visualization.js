@@ -143,7 +143,7 @@ function draw_plot(chart_data){
         .style({'font-size': '14px', 'font-family': 'sans-serif', // Style for the x axis label
                   'font-style': 'normal', 'font-variant': 'bold', 
                   'font-weight': 'bold'})
-        .text("NUMBER  OF  REVIEWS")
+        .text("Number  Of  Reviews")
 
       // draw the y axis
       var yAxis = d3.svg.axis()
@@ -173,7 +173,7 @@ function draw_plot(chart_data){
               .style({'font-size': '14px', 'font-family': 'sans-serif',
                   'font-style': 'normal', 'font-variant': 'normal', 
                   'font-weight': 'bold'})
-        .text("USER RATINGS")
+        .text("User Ratings")
 
       // draw the graph object
       var g = main.append("svg:g"); 
@@ -202,7 +202,7 @@ function draw_plot(chart_data){
                 .attr("r", 15) // set the radius on mouse over
                 .attr("fill","#c41200") // color change on mouse over
                 .style("opacity", 0.7)
-                return tooltip.style("visibility", "visible"),tooltip.text(names[i]+",  Rating:"+ydata[i]+",   #Reviews:"+xdata[i]);
+                return tooltip.style("visibility", "visible"),tooltip.text(names[i]+ ",  Rating:"+ydata[i]+",   #Reviews:"+xdata[i]);
                   })   // set the tool tip variable and return it
             .on("mouseout", function(d) {      // actions to be performed on mouse out
                 d3.select(this).transition()
