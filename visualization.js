@@ -194,9 +194,8 @@ function draw_plot(chart_data){
             .attr("cy", function (d) { return y(d); } ) // translate y value to a pixel
             .attr("cx", function (d,i) { return x(xdata[i]); } ) // translate x value
             .attr("r", 13) // radius of circle
-            
             .attr("fill","grey")
-            .style("opacity", 0.6) // opacity of circle
+            .style("opacity", 0.65) // opacity of circle
             .on("mouseover", function(d,i) {    // the actions to be performed on mouse over  
                 d3.select(this).transition()
                 .duration(750)
